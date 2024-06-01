@@ -18,8 +18,7 @@ async function predictClassification(model, image) {
 
     if (confidenceScore > 50) {
       label = "Cancer";
-      suggestion =
-        "Segera konsultasi dengan dokter terdekat untuk mengetahui detail terkait tingkat bahaya penyakit.";
+      suggestion = "Segera periksa ke dokter!";
     } else {
       label = "Non-cancer";
       suggestion = "Anda Sehat";
