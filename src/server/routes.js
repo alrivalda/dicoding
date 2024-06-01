@@ -10,16 +10,6 @@ const routes = [
         allow: "multipart/form-data",
         multipart: true,
         maxBytes: 1000000,
-        parseErrorHandler: (error, h, request) => {
-          if (error) {
-            throw h
-              .response(
-                "Payload content length greater than maximum allowed: 1000000",
-                413
-              )
-              .takeover();
-          }
-        },
       },
     },
   },
